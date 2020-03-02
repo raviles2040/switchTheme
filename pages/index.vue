@@ -3,7 +3,7 @@
     <div>
       <logo />
       <h1 class="title text-copy-primary">
-        BoilerPlate to practice switch style theme
+        {{ welcomeMessage }}
       </h1>
       <h2 class="subtitle text-copy-primary">
         My cat&#39;s pajamas Nuxt.js project
@@ -34,6 +34,16 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
+  },
+  computed: {
+    welcomeMessage: function () {
+      return this.$t('welcome_message')
+    }
+  },
+  created() {
+    setTimeout(() => {
+      this.$i18n.setLocale('en')  
+    }, 3000);
   }
 }
 </script>

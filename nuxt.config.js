@@ -40,6 +40,32 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    ['nuxt-i18n', {
+      seo: true,
+      locales: [
+        {
+          code: 'es',
+          iso: 'es-ES',
+          file: 'es-ES.js'
+        }, 
+        {
+          code: 'en',
+          iso: 'en-GB',
+          file: 'en-EN.js'
+        }
+      ],
+      lazy: true,
+      langDir: 'locales/',
+      defaultLocale: 'en',
+      detectBrowserLanguage: {
+        useCookie: true,
+        //cookieKey: 'i18n',
+        alwaysRedirect: false, 
+        fallbackLocale: 'es',
+      },
+      parsePages: false,
+      pages: {}
+    }]
   ],
   /*
   ** Build configuration
