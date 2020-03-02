@@ -1,6 +1,6 @@
-# darkTheme
-
-> My cat&#39;s pajamas Nuxt.js project
+# SwitchTheme 
+## dark and light
+> Switch theme style with a btn
 
 ## Build Setup
 
